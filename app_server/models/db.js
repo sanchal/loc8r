@@ -9,16 +9,16 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(dbURI);
 
-var readLine = require("readLine");
-if(process.platform == "win32") {
-  var rl = readLine.createInterface ({
-    input: process.stdin,
-    output: process.stdout
-  });
-  rl.on("SIGINT", function(){
-    process.emit("SIGINT");
-  });
-}
+// var readLine = require("readLine");
+// if(process.platform == "win32") {
+//   var rl = readLine.createInterface ({
+//     input: process.stdin,
+//     output: process.stdout
+//   });
+//   rl.on("SIGINT", function(){
+//     process.emit("SIGINT");
+//   });
+// }
 
 
 mongoose.connection.on('connected', function(){
