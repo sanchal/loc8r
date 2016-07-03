@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(dbURI);
 
-var readLine = require("readLine");
+var readLine = require("linebyline");
 if(process.platform == "win32") {
   var rl = readLine.createInterface ({
     input: process.stdin,
